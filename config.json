@@ -1,5 +1,4 @@
 {
-  // Database connection settings
   "database": {
     "host": "localhost",
     "port": 5432,
@@ -8,22 +7,19 @@
     "name": "mydatabase"
   },
 
-  // Server settings
   "server": {
-    "host": "0.0.0.0", // Listen on all interfaces
+    "host": "0.0.0.0",
     "port": 8080,
     "max_connections": 100,
     "timeout_seconds": 30
   },
 
-  // Logging settings
   "logging": {
-    "level": "INFO", // DEBUG, INFO, WARNING, ERROR, CRITICAL
+    "level": "INFO", 
     "file": "app.log",
     "format": "%(asctime)s - %(levelname)s - %(message)s"
   },
 
-  // Feature flags (enable/disable features)
   "features": {
     "email_notifications": true,
     "user_authentication": true,
@@ -32,12 +28,11 @@
 
   // API keys and secrets (keep these secure!)
   "api_keys": {
-    "stripe": "sk_test_XXXXXXXXXXXXXXXXXXXX",  // Example Stripe Secret Key - REPLACE THIS!
-    "google_maps": "YOUR_GOOGLE_MAPS_API_KEY" // REPLACE THIS!
+    "stripe": "sk_test_XXXXXXXXXXXXXXXXXXXX",  
+    "google_maps": "YOUR_GOOGLE_MAPS_API_KEY" 
   },
 
 
-  // Application specific settings
   "application": {
     "name": "My Awesome Application",
     "version": "1.0.0",

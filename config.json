@@ -1,40 +1,75 @@
 {
-  "database": {
-    "host": "localhost",
-    "port": 5432,
-    "user": "mydatabaseuser",
-    "password": "mydatabasepassword",
-    "name": "mydatabase"
+  "blog": {
+    "title": "My Personal Blog",
+    "subtitle": "Thoughts, stories, and ideas.",
+    "author": {
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "bio": "A passionate writer and developer exploring the intersection of technology and creativity.",
+      "socialLinks": {
+        "twitter": "https://twitter.com/johndoe",
+        "github": "https://github.com/johndoe",
+        "linkedin": "https://linkedin.com/in/johndoe"
+      }
+    }
   },
-
-  "server": {
-    "host": "0.0.0.0",
-    "port": 8080,
-    "max_connections": 100,
-    "timeout_seconds": 30
+  "appearance": {
+    "theme": "light", 
+    "availableThemes": ["light", "dark", "solarized"],
+    "font": {
+      "body": "Roboto, sans-serif",
+      "heading": "Merriweather, serif",
+      "monospace": "Courier New, monospace"
+    },
+    "colors": {
+      "primary": "#007acc",
+      "secondary": "#ff4081",
+      "background": "#ffffff",
+      "text": "#333333"
+    }
   },
-
-  "logging": {
-    "level": "INFO", 
-    "file": "app.log",
-    "format": "%(asctime)s - %(levelname)s - %(message)s"
+  "posts": {
+    "directory": "./posts",
+    "perPage": 5,
+    "enablePagination": true,
+    "defaultThumbnail": "./images/default-thumbnail.jpg",
+    "featuredTag": "Featured"
   },
-
-  "features": {
-    "email_notifications": true,
-    "user_authentication": true,
-    "api_v2": false
+  "navigation": {
+    "menu": [
+      { "label": "Home", "link": "/" },
+      { "label": "About", "link": "/about" },
+      { "label": "Blog", "link": "/blog" },
+      { "label": "Contact", "link": "/contact" }
+    ],
+    "footerLinks": [
+      { "label": "Privacy Policy", "link": "/privacy" },
+      { "label": "Terms of Service", "link": "/terms" }
+    ]
   },
-
-  "api_keys": {
-    "stripe": "sk_test_XXXXXXXXXXXXXXXXXXXX",  
-    "google_maps": "YOUR_GOOGLE_MAPS_API_KEY" 
+  "plugins": {
+    "analytics": {
+      "enabled": true,
+      "provider": "googleAnalytics",
+      "trackingId": "UA-XXXXX-Y"
+    },
+    "comments": {
+      "enabled": true,
+      "provider": "disqus",
+      "shortname": "my-blog-shortname"
+    },
+    "search": {
+      "enabled": true,
+      "provider": "algolia",
+      "appId": "your-app-id",
+      "apiKey": "your-search-only-api-key",
+      "indexName": "blog-posts"
+    }
   },
-
-
-  "application": {
-    "name": "My Awesome Application",
-    "version": "1.0.0",
-    "default_language": "en"
+  "deployment": {
+    "buildCommand": "npm run build",
+    "outputDirectory": "./dist",
+    "hostingProvider": "Vercel",
+    "customDomain": "https://myblog.com"
   }
 }

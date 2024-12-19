@@ -1,2 +1,0 @@
-- DONE [计算机专业所涉及的课程以及方向非常多，HackWay会尽可能详实地整理6大CS名校的所有关](https://hackway.org/docs/cs/map/#-c%E8%AF%AD%E8%A8%80%E4%B8%8Elinux)
-- DONE [再谈笔记软件 2024-09-08  ·  4962 words  ·  10 min  ](https://crisq.top/posts/note_again/)
